@@ -1,0 +1,902 @@
+[
+    {
+        "model": "lmn.show",
+        "pk": 1,
+        "fields": {
+            "show_date": "Apr 28, 2018",
+            "artist": 1,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 2,
+        "fields": {
+            "show_date": "Sep 18, 2018",
+            "artist": 2,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 3,
+        "fields": {
+            "show_date": "Aug 15, 2018",
+            "artist": 3,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 4,
+        "fields": {
+            "show_date": "Jul 27, 2018",
+            "artist": 4,
+            "venue": 2
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 5,
+        "fields": {
+            "show_date": "Sep 11, 2018",
+            "artist": 5,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 6,
+        "fields": {
+            "show_date": "Sep 28, 2018",
+            "artist": 6,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 7,
+        "fields": {
+            "show_date": "Oct 27, 2018",
+            "artist": 7,
+            "venue": 3
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 8,
+        "fields": {
+            "show_date": "Jul 22, 2018",
+            "artist": 8,
+            "venue": 4
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 9,
+        "fields": {
+            "show_date": "Sep 4, 2018",
+            "artist": 9,
+            "venue": 5
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 10,
+        "fields": {
+            "show_date": "Aug 24, 2018",
+            "artist": 10,
+            "venue": 6
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 11,
+        "fields": {
+            "show_date": "Aug 28, 2018",
+            "artist": 11,
+            "venue": 6
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 12,
+        "fields": {
+            "show_date": "Sep 16, 2018",
+            "artist": 12,
+            "venue": 7
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 13,
+        "fields": {
+            "show_date": "Apr 21, 2018",
+            "artist": 13,
+            "venue": 8
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 14,
+        "fields": {
+            "show_date": "May 5, 2018",
+            "artist": 14,
+            "venue": 9
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 15,
+        "fields": {
+            "show_date": "Apr 13, 2018",
+            "artist": 15,
+            "venue": 5
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 16,
+        "fields": {
+            "show_date": "Oct 6, 2018",
+            "artist": 16,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 17,
+        "fields": {
+            "show_date": "Jul 16, 2018",
+            "artist": 17,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 18,
+        "fields": {
+            "show_date": "Jul 21, 2018",
+            "artist": 18,
+            "venue": 2
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 19,
+        "fields": {
+            "show_date": "Aug 10, 2018",
+            "artist": 19,
+            "venue": 2
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 20,
+        "fields": {
+            "show_date": "Sep 12, 2018",
+            "artist": 20,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 21,
+        "fields": {
+            "show_date": "Oct 18, 2018",
+            "artist": 21,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 22,
+        "fields": {
+            "show_date": "Sep 29, 2018",
+            "artist": 22,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 23,
+        "fields": {
+            "show_date": "Jul 5, 2018",
+            "artist": 23,
+            "venue": 8
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 24,
+        "fields": {
+            "show_date": "Sep 1, 2018",
+            "artist": 24,
+            "venue": 9
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 25,
+        "fields": {
+            "show_date": "Apr 13, 2018",
+            "artist": 25,
+            "venue": 11
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 26,
+        "fields": {
+            "show_date": "Apr 12, 2018",
+            "artist": 26,
+            "venue": 11
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 27,
+        "fields": {
+            "show_date": "Apr 23, 2018",
+            "artist": 27,
+            "venue": 12
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 28,
+        "fields": {
+            "show_date": "Apr 27, 2018",
+            "artist": 28,
+            "venue": 13
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 29,
+        "fields": {
+            "show_date": "Jul 7, 2018",
+            "artist": 29,
+            "venue": 5
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 30,
+        "fields": {
+            "show_date": "Jul 11, 2018",
+            "artist": 30,
+            "venue": 5
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 31,
+        "fields": {
+            "show_date": "Sep 20, 2018",
+            "artist": 31,
+            "venue": 14
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 32,
+        "fields": {
+            "show_date": "Sep 23, 2018",
+            "artist": 32,
+            "venue": 15
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 33,
+        "fields": {
+            "show_date": "Feb 22, 2019",
+            "artist": 33,
+            "venue": 5
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 34,
+        "fields": {
+            "show_date": "Aug 30, 2018",
+            "artist": 34,
+            "venue": 15
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 35,
+        "fields": {
+            "show_date": "Sep 7, 2018",
+            "artist": 35,
+            "venue": 8
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 36,
+        "fields": {
+            "show_date": "Sep 7, 2018",
+            "artist": 36,
+            "venue": 7
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 37,
+        "fields": {
+            "show_date": "Nov 2, 2018",
+            "artist": 37,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 38,
+        "fields": {
+            "show_date": "Feb 21, 2019",
+            "artist": 38,
+            "venue": 5
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 39,
+        "fields": {
+            "show_date": "Jul 26, 2018",
+            "artist": 39,
+            "venue": 8
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 40,
+        "fields": {
+            "show_date": "Sep 6, 2018",
+            "artist": 40,
+            "venue": 8
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 41,
+        "fields": {
+            "show_date": "Aug 29, 2018",
+            "artist": 41,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 42,
+        "fields": {
+            "show_date": "Aug 8, 2018",
+            "artist": 42,
+            "venue": 9
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 43,
+        "fields": {
+            "show_date": "May 1, 2018",
+            "artist": 43,
+            "venue": 16
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 44,
+        "fields": {
+            "show_date": "Apr 20, 2018",
+            "artist": 44,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 45,
+        "fields": {
+            "show_date": "Apr 21, 2018",
+            "artist": 45,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 46,
+        "fields": {
+            "show_date": "Apr 21, 2018",
+            "artist": 46,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 47,
+        "fields": {
+            "show_date": "Apr 8, 2018",
+            "artist": 47,
+            "venue": 17
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 48,
+        "fields": {
+            "show_date": "Apr 17, 2018",
+            "artist": 48,
+            "venue": 17
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 49,
+        "fields": {
+            "show_date": "Apr 7, 2018",
+            "artist": 49,
+            "venue": 18
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 50,
+        "fields": {
+            "show_date": "Aug 31, 2018",
+            "artist": 50,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 51,
+        "fields": {
+            "show_date": "Apr 12, 2018",
+            "artist": 51,
+            "venue": 16
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 52,
+        "fields": {
+            "show_date": "Apr 7, 2018",
+            "artist": 52,
+            "venue": 19
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 53,
+        "fields": {
+            "show_date": "Apr 13, 2018",
+            "artist": 53,
+            "venue": 13
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 54,
+        "fields": {
+            "show_date": "Apr 6, 2018",
+            "artist": 54,
+            "venue": 13
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 55,
+        "fields": {
+            "show_date": "Aug 8, 2018",
+            "artist": 55,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 56,
+        "fields": {
+            "show_date": "Aug 14, 2018",
+            "artist": 56,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 57,
+        "fields": {
+            "show_date": "Apr 14, 2018",
+            "artist": 57,
+            "venue": 13
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 58,
+        "fields": {
+            "show_date": "Apr 7, 2018",
+            "artist": 58,
+            "venue": 14
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 59,
+        "fields": {
+            "show_date": "Aug 6, 2018",
+            "artist": 59,
+            "venue": 8
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 60,
+        "fields": {
+            "show_date": "Oct 2, 2018",
+            "artist": 60,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 61,
+        "fields": {
+            "show_date": "Apr 19, 2018",
+            "artist": 61,
+            "venue": 13
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 62,
+        "fields": {
+            "show_date": "Aug 19, 2018",
+            "artist": 62,
+            "venue": 1
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 63,
+        "fields": {
+            "show_date": "Jul 29, 2018",
+            "artist": 63,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 64,
+        "fields": {
+            "show_date": "Apr 13, 2018",
+            "artist": 64,
+            "venue": 20
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 65,
+        "fields": {
+            "show_date": "Apr 6, 2018",
+            "artist": 65,
+            "venue": 21
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 66,
+        "fields": {
+            "show_date": "Apr 7, 2018",
+            "artist": 66,
+            "venue": 9
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 67,
+        "fields": {
+            "show_date": "Apr 12, 2018",
+            "artist": 67,
+            "venue": 22
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 68,
+        "fields": {
+            "show_date": "Apr 14, 2018",
+            "artist": 68,
+            "venue": 17
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 69,
+        "fields": {
+            "show_date": "Apr 7, 2018",
+            "artist": 69,
+            "venue": 23
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 70,
+        "fields": {
+            "show_date": "Apr 7, 2018",
+            "artist": 70,
+            "venue": 24
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 71,
+        "fields": {
+            "show_date": "Oct 20, 2018",
+            "artist": 71,
+            "venue": 9
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 72,
+        "fields": {
+            "show_date": "Aug 31, 2018",
+            "artist": 72,
+            "venue": 9
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 73,
+        "fields": {
+            "show_date": "Apr 6, 2018",
+            "artist": 73,
+            "venue": 25
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 74,
+        "fields": {
+            "show_date": "Jun 30, 2018",
+            "artist": 74,
+            "venue": 2
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 75,
+        "fields": {
+            "show_date": "May 10, 2018",
+            "artist": 75,
+            "venue": 10
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 76,
+        "fields": {
+            "show_date": "Apr 8, 2018",
+            "artist": 76,
+            "venue": 11
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 77,
+        "fields": {
+            "show_date": "Apr 12, 2018",
+            "artist": 77,
+            "venue": 26
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 78,
+        "fields": {
+            "show_date": "Apr 15, 2018",
+            "artist": 78,
+            "venue": 11
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 79,
+        "fields": {
+            "show_date": "Apr 17, 2018",
+            "artist": 79,
+            "venue": 17
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 80,
+        "fields": {
+            "show_date": "Apr 9, 2018",
+            "artist": 80,
+            "venue": 27
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 81,
+        "fields": {
+            "show_date": "Apr 19, 2018",
+            "artist": 81,
+            "venue": 27
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 82,
+        "fields": {
+            "show_date": "Apr 11, 2018",
+            "artist": 82,
+            "venue": 27
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 83,
+        "fields": {
+            "show_date": "Apr 12, 2018",
+            "artist": 83,
+            "venue": 7
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 84,
+        "fields": {
+            "show_date": "Apr 6, 2018",
+            "artist": 84,
+            "venue": 14
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 85,
+        "fields": {
+            "show_date": "Apr 12, 2018",
+            "artist": 85,
+            "venue": 7
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 86,
+        "fields": {
+            "show_date": "Apr 14, 2018",
+            "artist": 86,
+            "venue": 17
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 87,
+        "fields": {
+            "show_date": "Apr 16, 2018",
+            "artist": 87,
+            "venue": 13
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 88,
+        "fields": {
+            "show_date": "Apr 12, 2018",
+            "artist": 88,
+            "venue": 13
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 89,
+        "fields": {
+            "show_date": "Apr 9, 2018",
+            "artist": 89,
+            "venue": 19
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 90,
+        "fields": {
+            "show_date": "Apr 12, 2018",
+            "artist": 90,
+            "venue": 28
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 91,
+        "fields": {
+            "show_date": "Apr 9, 2018",
+            "artist": 91,
+            "venue": 29
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 92,
+        "fields": {
+            "show_date": "Apr 27, 2018",
+            "artist": 92,
+            "venue": 30
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 93,
+        "fields": {
+            "show_date": "Apr 29, 2018",
+            "artist": 93,
+            "venue": 31
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 94,
+        "fields": {
+            "show_date": "Apr 26, 2018",
+            "artist": 94,
+            "venue": 19
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 95,
+        "fields": {
+            "show_date": "Apr 22, 2018",
+            "artist": 95,
+            "venue": 14
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 96,
+        "fields": {
+            "show_date": "Apr 30, 2018",
+            "artist": 96,
+            "venue": 13
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 97,
+        "fields": {
+            "show_date": "Apr 21, 2018",
+            "artist": 97,
+            "venue": 19
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 98,
+        "fields": {
+            "show_date": "May 1, 2018",
+            "artist": 98,
+            "venue": 32
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 99,
+        "fields": {
+            "show_date": "May 4, 2018",
+            "artist": 99,
+            "venue": 14
+        }
+    },
+    {
+        "model": "lmn.show",
+        "pk": 100,
+        "fields": {
+            "show_date": "May 4, 2018",
+            "artist": 100,
+            "venue": 13
+        }
+    }
+]
