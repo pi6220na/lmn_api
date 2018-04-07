@@ -3,31 +3,45 @@
 # pip install re
 # pip install json
 
+import calendar, random
 import requests, re, json
 from time import sleep
 from bs4 import BeautifulSoup
+from loremipsum import get_sentences
+from datetime import datetime
+from random import randint
+
 
 artist_list = []
 show_list = []
 venue_list = []
+note_list = []
+user_list = []
 
 artist_json = []
 venue_json = []
 show_json = []
+note_json = []
+user_json = []
 
 
 def main():
 
     # makes call to Eventful.com to get pages of Minneapolis area musical events
+    # note that getting data from the web and scrapping the pages is extremely slow
+    # getting and scrapping 100 shows takes several minutes
     #raw_data_list = getMPLS()
 
-    # test list used to save time during development
-    # comment out following line and uncomment above function call to run web scrap
+    # test list used to save time during development - built from live data
+    # comment out following line and uncomment above function call to run web scrapping for live data
     raw_data_list = getTestData()
+
+    # for line in raw_data_list:
+    #     print(line)
 
     # formats the raw line of data and prints in formatted columns
     if len(raw_data_list) > 0:
-        showData(raw_data_list)
+        scrubData(raw_data_list)
 
 
     # for line in artist_list:
@@ -42,21 +56,82 @@ def main():
     writeOutJSON()
 
 
+def buildNotes():
+
+    sentences_list = []
+    sentences = get_sentences(1250, start_with_lorem=True)
+
+    for sentence in sentences:
+        line1 = re.sub("b'", '', sentence)
+        line2 = re.sub("'", '', line1)
+        sentences_list.append(line2)
+
+    recNum = 0
+    for num in range(1,100,2):
+        for innerNum in range(randint(1,4)):
+            recNum += 1
+            rand = randint(1, 6)
+            pop1 = sentences_list.pop()
+            myDate = randomdate(2018,4)
+            #print(myDate)
+            nText = sentences_list.pop() + sentences_list.pop() + sentences_list.pop() + sentences_list.pop()
+            note_json.append({"model": "lmn.note", "pk": recNum, "fields": {"show": num, "user": rand, "title": pop1, "text": nText, "posted_date": str(myDate)}})
+
+    # for item in note_json:
+    #     print(item)
+
+
+# https://stackoverflow.com/questions/45833559/generate-random-date-in-a-particular-month-and-year
+def randomdate(year, month):
+    dates = calendar.Calendar().itermonthdates(year, month)
+    return random.choice([date for date in dates if date.month == month])
+
+
+def buildUsers():
+
+    user_json.append({"model": "auth.user", "pk": 1, "fields": {"username": "kevin", "first_name": "Kevin", "last_name": "Kevin-last", "email": "123@aaa.com", "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="}})
+    user_json.append({"model": "auth.user", "pk": 2, "fields": {"username": "bob", "first_name": "Bob", "last_name": "Bob-last", "email": "456@aaa.com", "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="}})
+    user_json.append({"model": "auth.user", "pk": 3, "fields": {"username": "mary", "first_name": "Mary", "last_name": "Mary-last", "email": "567@aaa.com", "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="}})
+    user_json.append({"model": "auth.user", "pk": 4, "fields": {"username": "jane", "first_name": "Jane", "last_name": "Jane-last", "email": "123@aaa.com", "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="}})
+    user_json.append({"model": "auth.user", "pk": 5, "fields": {"username": "bill", "first_name": "Bill", "last_name": "Bill-last", "email": "wer456@aaa.com", "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="}})
+    user_json.append({"model": "auth.user", "pk": 6, "fields": {"username": "betty", "first_name": "Betty", "last_name": "Betty-last", "email": "wer567@aaa.com", "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="}})
+
+    # for line in user_json:
+    #     print(line)
+
+
+    # pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU=
+    # password: asdfasdf   users: kevin jane
+
+    # pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0=
+    # password: zxcvzxcv   users: bob bill
+
+    # pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY=
+    # password: qwerqwer   users: mary betty
+
+
 def writeOutJSON():
 
 
     try:
 
-        with open('artist.json', 'w') as fp:
+        with open('fixtures/artist.json', 'w') as fp:
             # prettify the json using json.dumps
             json_string = json.dumps(artist_json, indent=4)
             fp.write(json_string)
-        with open('venue.json', 'w') as fp:
+        with open('fixtures/venue.json', 'w') as fp:
             json_string = json.dumps(venue_json, indent=4)
             fp.write(json_string)
-        with open('show.json', 'w') as fp:
+        with open('fixtures/show.json', 'w') as fp:
             json_string = json.dumps(show_json, indent=4)
             fp.write(json_string)
+        with open('fixtures/user.json', 'w') as fp:
+            json_string = json.dumps(user_json, indent=4)
+            fp.write(json_string)
+        with open('fixtures/note.json', 'w') as fp:
+            json_string = json.dumps(note_json, indent=4)
+            fp.write(json_string)
+
 
     except Exception as e:
         print("file error writing out JSON file: % e" % e)
@@ -66,9 +141,24 @@ def writeOutJSON():
 def buildJSON():
 
     num = 0
+    afirst_time = True
     for item in artist_list:
-        num += 1
-        artist_json.append({"model":"lmn.artist", "pk":num, "fields": {"name":item}})
+        if afirst_time:
+            num += 1
+            artist_json.append({"model":"lmn.artist", "pk":num, "fields": {"name":item}})
+            afirst_time = False
+        else:
+            afirst_time = False
+            for aitem in artist_json:
+                if aitem["fields"]["name"] in item:
+                    #print("In build artist table duplicate = " + aitem["fields"]["name"])
+                    found = True
+                    break
+                else:
+                    found = False
+            if not found:
+                num += 1
+                artist_json.append({"model": "lmn.artist", "pk": num, "fields": {"name": item}})
 
     num = 0
     first_time = True
@@ -100,12 +190,32 @@ def buildJSON():
 
         num += 1
         venue_key = getVenue(venue_list[num-1][0])
+        artist_key = getArtist(artist_list[num-1])
+        #print("returned artist key number: " + str(artist_key))
+        datetime_object = datetime.strptime(item, '%b %d, %Y')
 
-        if venue_key > 0:
-            show_json.append({"model":"lmn.show", "pk":num, "fields": {"show_date": item, "artist": num, "venue": venue_key }})
+        if venue_key > 0 and artist_key > 0:
+            show_json.append({"model":"lmn.show", "pk":num, "fields": {"show_date": str(datetime_object), "artist": artist_key, "venue": venue_key }})
         else:
-            print("error: venue for show was not found")
+            print("error: venue or artist for show was not found")
 
+
+    buildUsers()
+
+    buildNotes()
+
+
+
+def getArtist(artist):
+
+    num = 0
+    for aitem in artist_json:
+
+        num += 1
+        if aitem['fields']['name'] in artist:
+            return num
+
+    return 0
 
 def getVenue(venue):
 
@@ -162,7 +272,7 @@ def getMPLS():
     return raw_data_list
 
 
-def showData(raw_data_list):
+def scrubData(raw_data_list):
 
     # print()
     # print("Events scrapped from Eventful.com: ")
