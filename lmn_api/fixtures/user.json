@@ -6,7 +6,7 @@
             "username": "kevin",
             "first_name": "Kevin",
             "last_name": "Kevin-last",
-            "email": "123@aaa.com",
+            "email": "xcv123@aaa.com",
             "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="
         }
     },
@@ -17,7 +17,7 @@
             "username": "bob",
             "first_name": "Bob",
             "last_name": "Bob-last",
-            "email": "456@aaa.com",
+            "email": "zxcv456@aaa.com",
             "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="
         }
     },
@@ -28,7 +28,7 @@
             "username": "mary",
             "first_name": "Mary",
             "last_name": "Mary-last",
-            "email": "567@aaa.com",
+            "email": "zxcv567@aaa.com",
             "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="
         }
     },
@@ -39,7 +39,7 @@
             "username": "jane",
             "first_name": "Jane",
             "last_name": "Jane-last",
-            "email": "123@aaa.com",
+            "email": "zxcv123@aaa.com",
             "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="
         }
     },
