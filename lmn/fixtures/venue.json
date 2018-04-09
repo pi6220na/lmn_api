@@ -21,7 +21,7 @@
         "model": "lmn.venue",
         "pk": 3,
         "fields": {
-            "name": "Orpheum Theatre",
+            "name": "The Armory",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -30,8 +30,8 @@
         "model": "lmn.venue",
         "pk": 4,
         "fields": {
-            "name": "Canterbury Park",
-            "city": "Shakopee",
+            "name": "Orpheum Theatre",
+            "city": "Minneapolis",
             "state": "MN"
         }
     },
@@ -39,23 +39,14 @@
         "model": "lmn.venue",
         "pk": 5,
         "fields": {
-            "name": "Target Center",
-            "city": "Minneapolis",
+            "name": "Canterbury Park",
+            "city": "Shakopee",
             "state": "MN"
         }
     },
     {
         "model": "lmn.venue",
         "pk": 6,
-        "fields": {
-            "name": "Minnesota State Fair",
-            "city": "Saint Paul",
-            "state": "MN"
-        }
-    },
-    {
-        "model": "lmn.venue",
-        "pk": 7,
         "fields": {
             "name": "Mystic Lake Casino Hotel",
             "city": "Prior Lake",
@@ -64,9 +55,18 @@
     },
     {
         "model": "lmn.venue",
+        "pk": 7,
+        "fields": {
+            "name": "Minnesota State Fair Grandstand",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
         "pk": 8,
         "fields": {
-            "name": "The Armory",
+            "name": "Target Center",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -75,8 +75,8 @@
         "model": "lmn.venue",
         "pk": 9,
         "fields": {
-            "name": "US Bank Stadium",
-            "city": "Minneapolis",
+            "name": "Minnesota State Fair",
+            "city": "Saint Paul",
             "state": "MN"
         }
     },
@@ -84,7 +84,7 @@
         "model": "lmn.venue",
         "pk": 10,
         "fields": {
-            "name": "State Theatre",
+            "name": "US Bank Stadium",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -93,7 +93,7 @@
         "model": "lmn.venue",
         "pk": 11,
         "fields": {
-            "name": "Varsity Theater",
+            "name": "State Theatre",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -111,7 +111,7 @@
         "model": "lmn.venue",
         "pk": 13,
         "fields": {
-            "name": "First Avenue",
+            "name": "Varsity Theater",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -120,8 +120,8 @@
         "model": "lmn.venue",
         "pk": 14,
         "fields": {
-            "name": "Palace Theatre St Paul",
-            "city": "Saint Paul",
+            "name": "First Avenue",
+            "city": "Minneapolis",
             "state": "MN"
         }
     },
@@ -138,8 +138,8 @@
         "model": "lmn.venue",
         "pk": 16,
         "fields": {
-            "name": "Fine Line Music Cafe",
-            "city": "Minneapolis",
+            "name": "Palace Theatre St Paul",
+            "city": "Saint Paul",
             "state": "MN"
         }
     },
@@ -147,7 +147,7 @@
         "model": "lmn.venue",
         "pk": 17,
         "fields": {
-            "name": "Music Hall Minneapolis",
+            "name": "Fine Line Music Cafe",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -156,7 +156,7 @@
         "model": "lmn.venue",
         "pk": 18,
         "fields": {
-            "name": "7th Street Entry",
+            "name": "Music Hall Minneapolis",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -165,8 +165,8 @@
         "model": "lmn.venue",
         "pk": 19,
         "fields": {
-            "name": "Turf Club",
-            "city": "Saint Paul",
+            "name": "The Pourhouse",
+            "city": "Minneapolis",
             "state": "MN"
         }
     },
@@ -174,7 +174,7 @@
         "model": "lmn.venue",
         "pk": 20,
         "fields": {
-            "name": "The Pourhouse",
+            "name": "Skyway Theatre Skyway Theatre Presents: ",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -183,8 +183,8 @@
         "model": "lmn.venue",
         "pk": 21,
         "fields": {
-            "name": "Minneapolis, Minnesota, United States ht",
-            "city": "Minneapolis",
+            "name": "Turf Club",
+            "city": "Saint Paul",
             "state": "MN"
         }
     },
@@ -192,7 +192,7 @@
         "model": "lmn.venue",
         "pk": 22,
         "fields": {
-            "name": "MacPhail Center for Music Complimentary ",
+            "name": "Lee's Liquor Lounge",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -201,8 +201,8 @@
         "model": "lmn.venue",
         "pk": 23,
         "fields": {
-            "name": "Celtic Junction Arts Center The Traditio",
-            "city": "Saint Paul",
+            "name": "Minneapolis, Minnesota, United States ht",
+            "city": "Minneapolis",
             "state": "MN"
         }
     },
@@ -210,7 +210,7 @@
         "model": "lmn.venue",
         "pk": 24,
         "fields": {
-            "name": "Skyway Theatre Skyway Theatre Presents T",
+            "name": "The Warming House The Celebration Series",
             "city": "Minneapolis",
             "state": "MN"
         }
@@ -219,15 +219,6 @@
         "model": "lmn.venue",
         "pk": 25,
         "fields": {
-            "name": "The Hook and Ladder Theater & Lounge Thi",
-            "city": "Minneapolis",
-            "state": "MN"
-        }
-    },
-    {
-        "model": "lmn.venue",
-        "pk": 26,
-        "fields": {
             "name": "Burnsville Performing Arts ",
             "city": "Burnsville",
             "state": "MN"
@@ -235,7 +226,7 @@
     },
     {
         "model": "lmn.venue",
-        "pk": 27,
+        "pk": 26,
         "fields": {
             "name": "Amsterdam Bar and Hall",
             "city": "Saint Paul",
@@ -244,10 +235,19 @@
     },
     {
         "model": "lmn.venue",
+        "pk": 27,
+        "fields": {
+            "name": "Burns",
+            "city": "Burnsville",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
         "pk": 28,
         "fields": {
-            "name": "The Garage Burnsville with Lydia, Souven",
-            "city": "Burnsville",
+            "name": "The Icehouse Restaurant & Bar",
+            "city": "Minneapolis",
             "state": "MN"
         }
     },
@@ -275,15 +275,6 @@
         "fields": {
             "name": "Loring Pasta Bar",
             "city": "Minneapolis",
-            "state": "MN"
-        }
-    },
-    {
-        "model": "lmn.venue",
-        "pk": 32,
-        "fields": {
-            "name": "Myth",
-            "city": "Saint Paul",
             "state": "MN"
         }
     }

@@ -1,7 +1,3 @@
-# pip install requests
-# pip install b24
-# pip install re
-# pip install json
 
 import calendar, random
 import requests, re, json
@@ -11,6 +7,7 @@ from loremipsum import get_sentences
 from datetime import datetime
 from random import randint
 
+MAXPAGES = 10
 
 artist_list = []
 show_list = []
@@ -26,15 +23,27 @@ user_json = []
 
 
 def main():
+    '''This program makes calls to Eventful.com to get pages of Minneapolis area musical events,
+    cleans the data, and generates JSON files cooresponding the LMNOP project DB tables:
+    Artists, Venues, Shows, and Notes (Notes are generated for testing purposes - they will
+    not be part of the API call process. Each time this program is run using the stored raw_data_list, a new and
+    different Notes JSON file will be generated due to the randomness of how the file is built.)
 
-    # makes call to Eventful.com to get pages of Minneapolis area musical events
-    # note that getting data from the web and scrapping the pages is extremely slow
+    Any existing JSON files will be overwritten with new data
+
+    Exit = -5    There was an error calling the web site for data
+    Exit = -10   Error writing out the JSON files
+    '''
+
+
+    # Note that getting data from the web and scrapping the pages is extremely slow
     # getting and scrapping 100 shows takes several minutes
-    #raw_data_list = getMPLS()
+    # uncomment this line and comment out the following call to getTestData() to run against the web site.
+    raw_data_list = getMPLS()
 
-    # test list used to save time during development - built from live data
+    # Test list used to save time during development of this program - list built from live data
     # comment out following line and uncomment above function call to run web scrapping for live data
-    raw_data_list = getTestData()
+    #raw_data_list = getTestData()
 
     # for line in raw_data_list:
     #     print(line)
@@ -43,198 +52,25 @@ def main():
     if len(raw_data_list) > 0:
         scrubData(raw_data_list)
 
-
-    # for line in artist_list:
-    #     print(line)
-    # for line in show_list:
-    #     print(line)
-    # for line in venue_list:
-    #     print(line)
-
+    # This function builds lists and dictionaries (JSON) from the raw data list
     buildJSON()
 
+    # This function writes the dictionary lists to formatted JSON files and places the files in the fixtures
+    # sub-directory
     writeOutJSON()
-
-
-def buildNotes():
-
-    sentences_list = []
-    sentences = get_sentences(1250, start_with_lorem=True)
-
-    for sentence in sentences:
-        line1 = re.sub("b'", '', sentence)
-        line2 = re.sub("'", '', line1)
-        sentences_list.append(line2)
-
-    recNum = 0
-    for num in range(1,100,2):
-        for innerNum in range(randint(1,4)):
-            recNum += 1
-            rand = randint(1, 6)
-            pop1 = sentences_list.pop()
-            myDate = randomdate(2018,4)
-            #print(myDate)
-            nText = sentences_list.pop() + sentences_list.pop() + sentences_list.pop() + sentences_list.pop()
-            note_json.append({"model": "lmn.note", "pk": recNum, "fields": {"show": num, "user": rand, "title": pop1, "text": nText, "posted_date": str(myDate)}})
-
-    # for item in note_json:
-    #     print(item)
-
-
-# https://stackoverflow.com/questions/45833559/generate-random-date-in-a-particular-month-and-year
-def randomdate(year, month):
-    dates = calendar.Calendar().itermonthdates(year, month)
-    return random.choice([date for date in dates if date.month == month])
-
-
-def buildUsers():
-
-    user_json.append({"model": "auth.user", "pk": 1, "fields": {"username": "kevin", "first_name": "Kevin", "last_name": "Kevin-last", "email": "xcv123@aaa.com", "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="}})
-    user_json.append({"model": "auth.user", "pk": 2, "fields": {"username": "bob", "first_name": "Bob", "last_name": "Bob-last", "email": "zxcv456@aaa.com", "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="}})
-    user_json.append({"model": "auth.user", "pk": 3, "fields": {"username": "mary", "first_name": "Mary", "last_name": "Mary-last", "email": "zxcv567@aaa.com", "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="}})
-    user_json.append({"model": "auth.user", "pk": 4, "fields": {"username": "jane", "first_name": "Jane", "last_name": "Jane-last", "email": "zxcv123@aaa.com", "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="}})
-    user_json.append({"model": "auth.user", "pk": 5, "fields": {"username": "bill", "first_name": "Bill", "last_name": "Bill-last", "email": "wer456@aaa.com", "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="}})
-    user_json.append({"model": "auth.user", "pk": 6, "fields": {"username": "betty", "first_name": "Betty", "last_name": "Betty-last", "email": "wer567@aaa.com", "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="}})
-
-    # for line in user_json:
-    #     print(line)
-
-
-    # pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU=
-    # password: asdfasdf   users: kevin jane
-
-    # pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0=
-    # password: zxcvzxcv   users: bob bill
-
-    # pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY=
-    # password: qwerqwer   users: mary betty
-
-
-def writeOutJSON():
-
-
-    try:
-
-        with open('fixtures/artist.json', 'w') as fp:
-            # prettify the json using json.dumps
-            json_string = json.dumps(artist_json, indent=4)
-            fp.write(json_string)
-        with open('fixtures/venue.json', 'w') as fp:
-            json_string = json.dumps(venue_json, indent=4)
-            fp.write(json_string)
-        with open('fixtures/show.json', 'w') as fp:
-            json_string = json.dumps(show_json, indent=4)
-            fp.write(json_string)
-        with open('fixtures/user.json', 'w') as fp:
-            json_string = json.dumps(user_json, indent=4)
-            fp.write(json_string)
-        with open('fixtures/note.json', 'w') as fp:
-            json_string = json.dumps(note_json, indent=4)
-            fp.write(json_string)
-
-
-    except Exception as e:
-        print("file error writing out JSON file: % e" % e)
-
-
-
-def buildJSON():
-
-    num = 0
-    afirst_time = True
-    for item in artist_list:
-        if afirst_time:
-            num += 1
-            artist_json.append({"model":"lmn.artist", "pk":num, "fields": {"name":item}})
-            afirst_time = False
-        else:
-            afirst_time = False
-            for aitem in artist_json:
-                if aitem["fields"]["name"] in item:
-                    #print("In build artist table duplicate = " + aitem["fields"]["name"])
-                    found = True
-                    break
-                else:
-                    found = False
-            if not found:
-                num += 1
-                artist_json.append({"model": "lmn.artist", "pk": num, "fields": {"name": item}})
-
-    num = 0
-    first_time = True
-    for item in venue_list:
-
-        if first_time:
-            num = 1
-            venue_json.append(
-                {"model": "lmn.venue", "pk": num, "fields": {"name": item[0], "city": item[1], "state": item[2]}})
-            first_time = False
-        else:
-            found = False
-            #print('value searching for: ' + item[0] + '***')
-            for vitem in venue_json:
-                #print('value in venue dictionary: ' + vitem['fields']['name'] + '***')
-                if vitem['fields']['name'] in item[0]:
-                    found = True
-                    #print("******************** found *********************")
-                    break
-                else:
-                    found = False
-
-            if not found:
-                num += 1
-                venue_json.append({"model":"lmn.venue", "pk":num, "fields": {"name": item[0], "city": item[1], "state": item[2]}})
-
-    num = 0
-    for item in show_list:
-
-        num += 1
-        venue_key = getVenue(venue_list[num-1][0])
-        artist_key = getArtist(artist_list[num-1])
-        #print("returned artist key number: " + str(artist_key))
-        datetime_object = datetime.strptime(item, '%b %d, %Y')
-
-        if venue_key > 0 and artist_key > 0:
-            show_json.append({"model":"lmn.show", "pk":num, "fields": {"show_date": str(datetime_object), "artist": artist_key, "venue": venue_key }})
-        else:
-            print("error: venue or artist for show was not found")
-
-
-    buildUsers()
-
-    buildNotes()
-
-
-
-def getArtist(artist):
-
-    num = 0
-    for aitem in artist_json:
-
-        num += 1
-        if aitem['fields']['name'] in artist:
-            return num
-
-    return 0
-
-def getVenue(venue):
-
-    num = 0
-    for vitem in venue_json:
-        num += 1
-        #print('value in venue dictionary: ' + vitem['fields']['name'] + '***')
-        if vitem['fields']['name'] in venue:
-
-            #print("******************** found venue key *********************")
-            return num
-
-    return 0  # error, venue was not found
 
 
 
 def getMPLS():
-    # http://minneapolis.eventful.com/events/categories/music#!page_number=1&category=music
-    MAXPAGES = 10
+    '''This function calls eventful.com for Minneapolis area muscial events:
+    an example url - http://minneapolis.eventful.com/events/categories/music#!page_number=1&category=music
+    Each page contains 10 events.
+    The number of pages called for is controled by MAXPAGES variable.
+    For each page called the returned results are parsed for a string containing all of the required information,
+    example: 'Bon Jovi on Apr 28, 2018 in Saint Paul, MN at Xcel Energy Center.'
+    each parsed string is appended to the raw_data_list list.
+    '''
+
     raw_data_list = []
 
     print("Getting web data from %s pages total, please be patient." % MAXPAGES)
@@ -249,6 +85,7 @@ def getMPLS():
             print(result.status_code)
         except Exception as e:
             print('An exception happened while get web data: %s' % e)
+            exit (-5)
 
         if result.status_code == 200:
             c = result.content                      # page returned
@@ -264,7 +101,13 @@ def getMPLS():
                 minisoup = BeautifulSoup(c, "html.parser")
                 samples3 = minisoup.find("meta", {"name": "description"})['content']  # extract string with required
                                                                                       # event information
-                raw_data_list.append(samples3)
+
+                # we only want entries with one occurence of the literals "on", "in", and "at"
+                # anything else will break the Regex code
+                valid_data = validate(samples3)
+
+                if valid_data:
+                    raw_data_list.append(samples3)
         else:
             print("There was a problem getting web data. Web call return code = %s" % result.status_code)
             print("Web address: %s " % httpString)
@@ -272,13 +115,29 @@ def getMPLS():
     return raw_data_list
 
 
+def validate(samples3):
+    '''Some entries from the web site may be so malformed the Regex won't work.
+    If more than one occurence of "on", "in", or "at"  reject the entry'''
+
+    # https://stackoverflow.com/questions/19848353/number-of-occurrences-of-a-substring-in-a-string
+    if ( (samples3.count(' on ') == 1) and
+            (samples3.count(' in ') == 1) and
+            (samples3.count(' at ') == 1) ):
+        return True
+
+    return False
+
+
 def scrubData(raw_data_list):
+    '''This function iterates thru the raw_data_list and cleans (scrubs) the data using Regex to removed
+    unwanted characters and split the main string apart into components destined for different tables.'''
 
     # print()
     # print("Events scrapped from Eventful.com: ")
     # print()
     line_count = 0
     for line in raw_data_list:
+        # print(line_count)
         # print("'" + line + "',") ### builds raw line scrapped from web for development test data
         # example line='Counting Crows &amp; Live - Band on Sep 16, 2018 in Prior Lake, MN(Minneapolis / Saint Paul metro area) at Mystic Lake Casino Hotel.'
 
@@ -319,6 +178,207 @@ def scrubData(raw_data_list):
 
     # print()
     # print("%s events found for Minneapolis area." % line_count)
+
+
+
+def buildJSON():
+    '''This function creates five json format dictionaries: artists, venues, shows, users, notes
+    In some cases, in order to determine the foreign key ID, a mini-routine is called to scan the foreign
+    list (table) for the matching element.
+    In some cases where duplicate entries are possible, such as venues, the list is searched for an existing element.
+    '''
+
+    # build artist json list
+    num = 0
+    afirst_time = True
+    for item in artist_list:
+        if afirst_time:
+            num += 1
+            artist_json.append({"model":"lmn.artist", "pk":num, "fields": {"name":item}})
+            afirst_time = False
+        else:
+            afirst_time = False
+            for aitem in artist_json:
+                if aitem["fields"]["name"] in item:
+                    #print("In build artist table duplicate = " + aitem["fields"]["name"])
+                    found = True
+                    break
+                else:
+                    found = False
+            if not found:
+                num += 1
+                artist_json.append({"model": "lmn.artist", "pk": num, "fields": {"name": item}})
+
+    # build venue json list
+    num = 0
+    first_time = True
+    for item in venue_list:
+
+        if first_time:
+            num = 1
+            venue_json.append(
+                {"model": "lmn.venue", "pk": num, "fields": {"name": item[0], "city": item[1], "state": item[2]}})
+            first_time = False
+        else:
+            found = False
+            #print('value searching for: ' + item[0] + '***')
+            for vitem in venue_json:
+                #print('value in venue dictionary: ' + vitem['fields']['name'] + '***')
+                if vitem['fields']['name'] in item[0]:
+                    found = True
+                    #print("******************** found *********************")
+                    break
+                else:
+                    found = False
+
+            if not found:
+                num += 1
+                venue_json.append({"model":"lmn.venue", "pk":num, "fields": {"name": item[0], "city": item[1], "state": item[2]}})
+
+    # build show json list
+    num = 0
+    for item in show_list:
+
+        num += 1
+        venue_key = getVenue(venue_list[num-1][0])
+        artist_key = getArtist(artist_list[num-1])
+        #print("returned artist key number: " + str(artist_key))
+        datetime_object = datetime.strptime(item, '%b %d, %Y')
+
+        if venue_key > 0 and artist_key > 0:
+            show_json.append({"model":"lmn.show", "pk":num, "fields": {"show_date": str(datetime_object), "artist": artist_key, "venue": venue_key }})
+        else:
+            print("error: venue or artist for show was not found")
+
+
+    buildUsers()
+
+    buildNotes()
+
+
+def getArtist(artist):
+    '''Get the artist Primary Key ID of an existing artist, or return zero if not found'''
+    num = 0
+    for aitem in artist_json:
+
+        num += 1
+        if aitem['fields']['name'] in artist:
+            return num
+
+    return 0
+
+
+def getVenue(venue):
+    '''Get the venue Primary Key ID of an existing venue, or return zero if not found'''
+    num = 0
+    for vitem in venue_json:
+        num += 1
+        #print('value in venue dictionary: ' + vitem['fields']['name'] + '***')
+        if vitem['fields']['name'] in venue:
+
+            #print("******************** found venue key *********************")
+            return num
+
+    return 0  # error, venue was not found
+
+
+def buildUsers():
+    ''' Users are created for testing purposes and for use in creating Notes.'''
+
+    user_json.append({"model": "auth.user", "pk": 1, "fields": {"username": "kevin", "first_name": "Kevin", "last_name": "Kevin-last", "email": "xcv123@aaa.com", "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="}})
+    user_json.append({"model": "auth.user", "pk": 2, "fields": {"username": "bob", "first_name": "Bob", "last_name": "Bob-last", "email": "zxcv456@aaa.com", "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="}})
+    user_json.append({"model": "auth.user", "pk": 3, "fields": {"username": "mary", "first_name": "Mary", "last_name": "Mary-last", "email": "zxcv567@aaa.com", "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="}})
+    user_json.append({"model": "auth.user", "pk": 4, "fields": {"username": "jane", "first_name": "Jane", "last_name": "Jane-last", "email": "zxcv123@aaa.com", "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="}})
+    user_json.append({"model": "auth.user", "pk": 5, "fields": {"username": "bill", "first_name": "Bill", "last_name": "Bill-last", "email": "wer456@aaa.com", "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="}})
+    user_json.append({"model": "auth.user", "pk": 6, "fields": {"username": "betty", "first_name": "Betty", "last_name": "Betty-last", "email": "wer567@aaa.com", "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="}})
+
+    # for line in user_json:
+    #     print(line)
+
+    # pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU=
+    # password: asdfasdf   users: kevin jane
+
+    # pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0=
+    # password: zxcvzxcv   users: bob bill
+
+    # pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY=
+    # password: qwerqwer   users: mary betty
+
+
+def buildNotes():
+    '''After the users list is generated, Notes can be built.
+    Notes generated with random text
+    The user writing the note is determined randomly
+    A data in the specified month is determined random - any day within the specified month, month can be changed
+    Every other show will get between 1 and 4 notes.
+    '''
+
+    SENTENCECOUNT = 1250
+    #LINESPERPAGE = 10
+    STEP = 2
+    NUMUSERS = 6
+    RANDYEAR = 2018
+    RANDMONTH = 4
+
+    sentences_list = []
+    sentences = get_sentences(SENTENCECOUNT, start_with_lorem=True)
+
+    # this routine uses "from loremipsum import get_sentences"
+    for sentence in sentences:
+        line1 = re.sub("b'", '', sentence)
+        line2 = re.sub("'", '', line1)
+        sentences_list.append(line2)
+
+    recNum = 0
+    for num in range(1, len(show_list), STEP):
+        for innerNum in range(randint(1,4)):
+            recNum += 1
+            rand = randint(1, NUMUSERS)
+            pop1 = sentences_list.pop()
+            myDate = randomdate(RANDYEAR, RANDMONTH)
+            #print(myDate)
+            nText = sentences_list.pop() + sentences_list.pop() + sentences_list.pop() + sentences_list.pop()
+            note_json.append({"model": "lmn.note", "pk": recNum, "fields": {"show": num, "user": rand, "title": pop1, "text": nText, "posted_date": str(myDate)}})
+
+    # for item in note_json:
+    #     print(item)
+
+
+# https://stackoverflow.com/questions/45833559/generate-random-date-in-a-particular-month-and-year
+def randomdate(year, month):
+    '''Returns a date somewhere within the year/month provided'''
+    dates = calendar.Calendar().itermonthdates(year, month)
+    return random.choice([date for date in dates if date.month == month])
+
+
+
+def writeOutJSON():
+    '''Format and write JSON files from json dictionary lists'''
+
+    try:
+
+        with open('fixtures/artist.json', 'w') as fp:
+            # prettify the json using json.dumps
+            json_string = json.dumps(artist_json, indent=4)
+            fp.write(json_string)
+        with open('fixtures/venue.json', 'w') as fp:
+            json_string = json.dumps(venue_json, indent=4)
+            fp.write(json_string)
+        with open('fixtures/show.json', 'w') as fp:
+            json_string = json.dumps(show_json, indent=4)
+            fp.write(json_string)
+        with open('fixtures/user.json', 'w') as fp:
+            json_string = json.dumps(user_json, indent=4)
+            fp.write(json_string)
+        with open('fixtures/note.json', 'w') as fp:
+            json_string = json.dumps(note_json, indent=4)
+            fp.write(json_string)
+
+
+    except Exception as e:
+        print("file error writing out JSON file: % e" % e)
+        exit(-10)
+
 
 
 def getTestData():

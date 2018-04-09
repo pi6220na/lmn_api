@@ -5,7 +5,7 @@ import sys
 from django.contrib.auth.hashers import make_password
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lmn_api_project.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lmn_project.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
