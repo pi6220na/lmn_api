@@ -1,0 +1,281 @@
+[
+    {
+        "model": "lmn.venue",
+        "pk": 1,
+        "fields": {
+            "name": "Xcel Energy Center",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 2,
+        "fields": {
+            "name": "Target Field",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 3,
+        "fields": {
+            "name": "The Armory",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 4,
+        "fields": {
+            "name": "Orpheum Theatre",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 5,
+        "fields": {
+            "name": "Canterbury Park",
+            "city": "Shakopee",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 6,
+        "fields": {
+            "name": "Mystic Lake Casino Hotel",
+            "city": "Prior Lake",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 7,
+        "fields": {
+            "name": "Minnesota State Fair Grandstand",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 8,
+        "fields": {
+            "name": "Target Center",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 9,
+        "fields": {
+            "name": "Minnesota State Fair",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 10,
+        "fields": {
+            "name": "US Bank Stadium",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 11,
+        "fields": {
+            "name": "State Theatre",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 12,
+        "fields": {
+            "name": "Fine Line Music Cafe with special guest ",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 13,
+        "fields": {
+            "name": "Varsity Theater",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 14,
+        "fields": {
+            "name": "First Avenue",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 15,
+        "fields": {
+            "name": "Ordway Center for the Performing Arts",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 16,
+        "fields": {
+            "name": "Palace Theatre St Paul",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 17,
+        "fields": {
+            "name": "Fine Line Music Cafe",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 18,
+        "fields": {
+            "name": "Music Hall Minneapolis",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 19,
+        "fields": {
+            "name": "The Pourhouse",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 20,
+        "fields": {
+            "name": "Skyway Theatre Skyway Theatre Presents: ",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 21,
+        "fields": {
+            "name": "Turf Club",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 22,
+        "fields": {
+            "name": "Lee's Liquor Lounge",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 23,
+        "fields": {
+            "name": "Minneapolis, Minnesota, United States ht",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 24,
+        "fields": {
+            "name": "The Warming House The Celebration Series",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 25,
+        "fields": {
+            "name": "Burnsville Performing Arts ",
+            "city": "Burnsville",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 26,
+        "fields": {
+            "name": "Amsterdam Bar and Hall",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 27,
+        "fields": {
+            "name": "Burns",
+            "city": "Burnsville",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 28,
+        "fields": {
+            "name": "The Icehouse Restaurant & Bar",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 29,
+        "fields": {
+            "name": "Cinema Ballroom Samba",
+            "city": "Saint Paul",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 30,
+        "fields": {
+            "name": "The Women's Club of Minneapolis",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    },
+    {
+        "model": "lmn.venue",
+        "pk": 31,
+        "fields": {
+            "name": "Loring Pasta Bar",
+            "city": "Minneapolis",
+            "state": "MN"
+        }
+    }
+]

@@ -1,0 +1,639 @@
+[
+    {
+        "model": "lmn.artist",
+        "pk": 1,
+        "fields": {
+            "name": "Bon Jovi"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 2,
+        "fields": {
+            "name": "Rod Stewart & Cyndi Lauper"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 3,
+        "fields": {
+            "name": "Justin Timberlake - The Man Of The Woods Tour"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 4,
+        "fields": {
+            "name": "Bruno Mars & Cardi B"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 5,
+        "fields": {
+            "name": "Justin Timberlake"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 6,
+        "fields": {
+            "name": "Maroon 5: Red Pill Blues Tour 2018"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 7,
+        "fields": {
+            "name": "Journey & Def Leppard"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 8,
+        "fields": {
+            "name": "Tech N9ne"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 9,
+        "fields": {
+            "name": "Keyshia Cole and Tank"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 10,
+        "fields": {
+            "name": "Vans Warped Tour 2018"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 11,
+        "fields": {
+            "name": "Counting Crows & Live - Band"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 12,
+        "fields": {
+            "name": "Jason Mraz"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 13,
+        "fields": {
+            "name": "Metallica"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 14,
+        "fields": {
+            "name": "Sugarland"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 15,
+        "fields": {
+            "name": "Kenny Chesney: Trip Around the Sun Tour"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 16,
+        "fields": {
+            "name": "Zac Brown Band & OneRepublic"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 17,
+        "fields": {
+            "name": "Joan Baez"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 18,
+        "fields": {
+            "name": "Luke Bryan, Sam Hunt & Jon Pardi"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 19,
+        "fields": {
+            "name": "MercyMe & Tenth Avenue North"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 20,
+        "fields": {
+            "name": "The Pretenders"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 21,
+        "fields": {
+            "name": "Foo Fighters"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 22,
+        "fields": {
+            "name": "CALEXICO"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 23,
+        "fields": {
+            "name": "Taylor Swift"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 24,
+        "fields": {
+            "name": "Marco Antonio Solis: Y La Historia Continua"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 25,
+        "fields": {
+            "name": "Camila Cabello"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 26,
+        "fields": {
+            "name": "Voices for Vision - Featuring Kat Perkins & Blind Joe"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 27,
+        "fields": {
+            "name": "Robert Earl Keen"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 28,
+        "fields": {
+            "name": "Franz Ferdinand"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 29,
+        "fields": {
+            "name": "Ringo Starr And His All Starr Band"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 30,
+        "fields": {
+            "name": "Elton John"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 31,
+        "fields": {
+            "name": "Alice Cooper"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 32,
+        "fields": {
+            "name": "Needtobreathe, Johnnyswim & Forest Blakk"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 33,
+        "fields": {
+            "name": "Panic! At The Disco, Hayley Kiyoko & Arizona"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 34,
+        "fields": {
+            "name": "OAR & Matt Nathanson"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 35,
+        "fields": {
+            "name": "Josh Groban & Idina Menzel"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 36,
+        "fields": {
+            "name": "3 Doors Down & Collective Soul"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 37,
+        "fields": {
+            "name": "Rise Against (18+ Event)"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 38,
+        "fields": {
+            "name": "Leon Bridges"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 39,
+        "fields": {
+            "name": "Lyle Lovett and His Large Band"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 40,
+        "fields": {
+            "name": "On The Run II: Beyonce & Jay-Z"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 41,
+        "fields": {
+            "name": "Big Sean: Unfriendly Reminder Tour 2018"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 42,
+        "fields": {
+            "name": "Jorja Smith"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 43,
+        "fields": {
+            "name": "Brian Fallon"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 44,
+        "fields": {
+            "name": "Kate Nash"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 45,
+        "fields": {
+            "name": "Sam Smith"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 46,
+        "fields": {
+            "name": "Wyclef Jean"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 47,
+        "fields": {
+            "name": "Fortunate Youth - Studio B"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 48,
+        "fields": {
+            "name": "Margo Price"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 49,
+        "fields": {
+            "name": "TAUK"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 50,
+        "fields": {
+            "name": "Khruangbin"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 51,
+        "fields": {
+            "name": "Jack White"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 52,
+        "fields": {
+            "name": "Jethro Tull"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 53,
+        "fields": {
+            "name": "Lord Huron"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 54,
+        "fields": {
+            "name": "The Wood Brothers"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 55,
+        "fields": {
+            "name": "James Bay"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 56,
+        "fields": {
+            "name": "Smashing Pumpkins"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 57,
+        "fields": {
+            "name": "Erasure - World Be Gone Tour"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 58,
+        "fields": {
+            "name": "Charlie Puth: The Voicenotes Tour"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 59,
+        "fields": {
+            "name": "Echosmith"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 60,
+        "fields": {
+            "name": "Sirenia (18+ Event)"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 61,
+        "fields": {
+            "name": "U Wanna Dance *Swing*Blues*Cajun*Zydeco*"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 62,
+        "fields": {
+            "name": "Cradle of Filth"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 63,
+        "fields": {
+            "name": "Celebration Series: The Music of Ani DiFranco & Linda Ronstadt"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 64,
+        "fields": {
+            "name": "Ed Sheeran: 2018 North American Stadium Tour"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 65,
+        "fields": {
+            "name": "The Eagles, Jimmy Buffett and The Coral Reefer Band"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 66,
+        "fields": {
+            "name": "Tony Bennett with - special guest Antonia Bennett"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 67,
+        "fields": {
+            "name": "Paramore & Foster The People"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 68,
+        "fields": {
+            "name": "Tonic Sol-fa and Shaun Johnson Big Band Experience"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 69,
+        "fields": {
+            "name": "5 Seconds of Summer"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 70,
+        "fields": {
+            "name": "BRIAN FALLON & THE HOWLING WEATHER"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 71,
+        "fields": {
+            "name": "SiriusXM Presents Alt Nation&#39;s Advanced Placement Tour"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 72,
+        "fields": {
+            "name": "Janine"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 73,
+        "fields": {
+            "name": "I Dig Peter, Paul & Mary"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 74,
+        "fields": {
+            "name": "Burnsville Rotary&#39;s Concert for Caring with Under the Streetlamp"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 75,
+        "fields": {
+            "name": "KC & the Sunshine Band"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 76,
+        "fields": {
+            "name": "Michigander"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 77,
+        "fields": {
+            "name": "Beautiful Vision- The Essential Songs Of Van Morrison"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 78,
+        "fields": {
+            "name": "KC and the Sunshine Band Tickets (18+ Event)"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 79,
+        "fields": {
+            "name": "Matt and Kim Tickets (18+ Event)"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 80,
+        "fields": {
+            "name": "Phoebe Bridgers"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 81,
+        "fields": {
+            "name": "Skizzy Mars"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 82,
+        "fields": {
+            "name": "Moose Blood"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 83,
+        "fields": {
+            "name": "Hurray for the Riff Raff Tickets (18+ Event)"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 84,
+        "fields": {
+            "name": "Progressive Nightclub"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 85,
+        "fields": {
+            "name": "Chad Prather"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 86,
+        "fields": {
+            "name": "Dumbfoundead"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 87,
+        "fields": {
+            "name": "Dr Dog (18+ Event)"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 88,
+        "fields": {
+            "name": "George Ezra"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 89,
+        "fields": {
+            "name": "Unknown Mortal Orchestra Tickets (18+ Event)"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 90,
+        "fields": {
+            "name": "Trampled By Turtles"
+        }
+    },
+    {
+        "model": "lmn.artist",
+        "pk": 91,
+        "fields": {
+            "name": "Gear Daddies"
+        }
+    }
+]

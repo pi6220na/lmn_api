@@ -1,0 +1,68 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "kevin",
+            "first_name": "Kevin",
+            "last_name": "Kevin-last",
+            "email": "xcv123@aaa.com",
+            "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "bob",
+            "first_name": "Bob",
+            "last_name": "Bob-last",
+            "email": "zxcv456@aaa.com",
+            "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "mary",
+            "first_name": "Mary",
+            "last_name": "Mary-last",
+            "email": "zxcv567@aaa.com",
+            "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "username": "jane",
+            "first_name": "Jane",
+            "last_name": "Jane-last",
+            "email": "zxcv123@aaa.com",
+            "password": "pbkdf2_sha256$100000$FmE0uvtW02K6$lRqwDwm/E0M/0Fgb9v09ZyH4p5simN6vBLy+KyzqDOU="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "username": "bill",
+            "first_name": "Bill",
+            "last_name": "Bill-last",
+            "email": "wer456@aaa.com",
+            "password": "pbkdf2_sha256$100000$3m7XTcsWfgZE$8FRAIG1EL8d+QxuKKNWeKo4F5aEpRqtxnSeyJbeJwe0="
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "username": "betty",
+            "first_name": "Betty",
+            "last_name": "Betty-last",
+            "email": "wer567@aaa.com",
+            "password": "pbkdf2_sha256$100000$YsLjt3vB2eme$Qj8+si71Zgh3eM0TBpskpbD2OMVEmg1gtAzczYKfQLY="
+        }
+    }
+]
