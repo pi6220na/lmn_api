@@ -10,8 +10,8 @@ from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
 
-# needs environment variable for database password set:  LMN_DB_Pw=xxxx
-#print(os.environ['LMN_DB_PW'])
+# needs environment variable for database password set:  LMNOP_DB_Pw=xxxx
+#print(os.environ['LMNOP_DB_PW'])
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lmn_project.settings")
